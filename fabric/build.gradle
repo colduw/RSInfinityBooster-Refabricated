@@ -28,7 +28,7 @@ repositories {
 }
 
 base {
-    archivesName = mod_id + "-fabric"
+    archivesName = mod_id + "-fabric-" + minecraft_version
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(25)
