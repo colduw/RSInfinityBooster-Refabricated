@@ -14,8 +14,8 @@ import uk.co.hexeption.rsinfinitybooster.item.InfinityCard;
  */
 public class ModItems {
 
-	public static final DeferredItem<Item> INFINITY_CARD = Registration.ITEMS.register("infinity_card", resourceLocation -> new InfinityCard(RefinedStorageApiImpl.INSTANCE.getUpgradeRegistry()));
-	public static final DeferredItem<Item> DIMENSION_CARD = Registration.ITEMS.register("dimension_card", resourceLocation -> new DimensionCard(RefinedStorageApiImpl.INSTANCE.getUpgradeRegistry()));
+	public static final DeferredItem<Item> INFINITY_CARD = Registration.ITEMS.registerItem("infinity_card", resourceLocation -> new InfinityCard(resourceLocation, RefinedStorageApiImpl.INSTANCE.getUpgradeRegistry()));
+	public static final DeferredItem<Item> DIMENSION_CARD = Registration.ITEMS.registerItem("dimension_card", resourceLocation -> new DimensionCard(resourceLocation, RefinedStorageApiImpl.INSTANCE.getUpgradeRegistry()));
 
 	static void register() {
 	}
