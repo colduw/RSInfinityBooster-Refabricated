@@ -41,5 +41,5 @@ jobs:
         prerelease: false
         files: |
           ./neoforge/build/libs/*.jar
-          ./forge/build/libs/*.jar
+          ./fabric/build/libs/*.jar
         fail_on_unmatched_files: true
