@@ -12,17 +12,14 @@ import uk.co.hexeption.rsinfinitybooster.setup.ModItems;
 
 @Mixin(targets = "com.refinedmods.refinedstorage.common.networking.WirelessTransmitterNetworkNodeContainer", remap = false)
 public class MixinWirelessTransmitterNetworkNodeContainer {
-
     @Shadow
     @Final
     private WirelessTransmitterBlockEntity blockEntity;
 
     @Inject(method = "isValid", at = @At("HEAD"), cancellable = true)
     private void isValid(NetworkItemPlayerValidator.PlayerCoordinates coordinates, CallbackInfoReturnable<Boolean> cir) {
-        if (blockEntity.getUpgrades().stream().anyMatch(upgrade -> upgrade.is(ModItems.DIMENSION_CARD.get()))) {
+        if (blockEntity.getUpgrades().stream().anyMatch(upgrade -> upgrade.is(ModItems.DIMENSION_CARD))) {
             cir.setReturnValue(true);
         }
-
     }
-
 }
